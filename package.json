@@ -1,0 +1,69 @@
+{
+  "name": "githubapp",
+  "version": "1.0.0",
+  "description": "Cliente Github",
+  "main": "./src/index.js",
+  "author": "joao",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dashboard -- node server.js",
+    "test": "jest --coverage",
+    "test:watch": "yarn test --watchAll",
+    "lint": "standard --verbose | snazzy",
+    "lint:watch": "gulp",
+    "lint:fix": "standard --fix",
+    "build": "webpack --progress --config webpack/prod.config.js -p",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@hot-loader/react-dom": "^16.13.0",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "babel-jest": "^26.1.0",
+    "babel-loader": "^8.1.0",
+    "chai": "^4.2.0",
+    "create-react-class": "^15.6.3",
+    "css-loader": "^3.6.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "gulp": "^4.0.2",
+    "html-webpack-plugin": "^4.3.0",
+    "jest-cli": "^26.1.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "raw-loader": "^4.0.1",
+    "react-hot-loader": "^4.12.21",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.4",
+    "standard-loader": "^7.0.0",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^3.0.7",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dashboard": "^3.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@fdaciuk/ajax": "^3.0.4",
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "standard": {
+    "globals": [
+      "test",
+      "it",
+      "describe"
+    ],
+    "ignore": [
+      "/.storybook/",
+      "/dist/",
+      "*.stories.js"
+    ]
+  }
+}

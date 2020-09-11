@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+stories
+favicon.ico
+*.lock
+*.log
+.vscode
