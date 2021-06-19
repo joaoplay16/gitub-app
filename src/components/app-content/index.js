@@ -5,6 +5,7 @@ import UserInfo from 'components/user-info'
 import PropTypes from 'prop-types'
 import React from 'react'
 import './app.css'
+
 const AppContent = ({
   userinfo,
   repos,
@@ -18,6 +19,8 @@ const AppContent = ({
   <div className='app'>
     <Search isDisabled={isFetching} handleSearch={handleSearch} />
     {isFetching && <div>Carregando.........</div>}
+    {/* Para converter suas variáveis ​​JavaScript em booleanas, 
+        basta usar dois sinais de exclamação: */}
     {!!userinfo && <UserInfo userinfo={userinfo} />}
     {!!userinfo && <Actions
       getRepos={(getRepos)} getStarred={getStarred}

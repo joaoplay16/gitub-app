@@ -1,8 +1,9 @@
-
+const {join} = require('path')
 const webpack = require('webpack')
 const common = require('./common')
 const HtmlPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
   entry: common.entry,
@@ -12,7 +13,9 @@ module.exports = {
         minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
       }, */
 
+  // plugins executam na ordem
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name]-[hash].css',
       chunkFilename: '[id]-[hash].css'
